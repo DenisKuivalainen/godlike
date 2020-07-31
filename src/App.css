@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+@font-face {
+  font-family: ClearFont;
+  src: url(19190.ttf);
+}
+
+p {
+  font-family: ClearFont;
+  white-space: pre;
+  align-self: left;
+  color: white;
+}
+
+.left-pos {
+  position: relative;
+  float: right;
+}
+
+.line div div {
+  font-family: ClearFont;
+  white-space: pre !important;
+  align-self: left;
+  color: white;
+  -moz-text-size-adjust: 2.5 !important;
+  -webkit-text-size-adjust: 2.5 !important;
+  -ms-text-size-adjust: 2.5 !important;
+  letter-spacing: 0.1em;
+}
