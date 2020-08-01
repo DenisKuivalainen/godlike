@@ -11,9 +11,9 @@ class Ramka extends React.Component {
     render() {
       return (
             <div>
-                <Border fst="|" sng="-" n="1" />
-                <Border fst="|" sng=" " n="17" />
-                <Border fst="|" sng="-" n="1" />
+                <Border fst="|" snd='-' n="1" />
+                <Border fst="|" snd=" " n="17" />
+                <Border fst="|" snd='-' n="1" />
         </div>
       );
     }

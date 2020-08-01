@@ -1,5 +1,5 @@
 import React from 'react';
-import Textfit from 'react-textfit';
+import {FontSize} from './FontSize';
 import './Hat.css';
 
 class Border extends React.Component {
@@ -7,6 +7,7 @@ class Border extends React.Component {
       super(props);
       this.state = {};
     }
+    static contextType = FontSize;
     
     render() {
       return (
@@ -18,7 +19,7 @@ class Border extends React.Component {
 
     getReturn() {
         console.log(1)
-        return Array(eval(this.props.n)).fill(null).map((i) => <Textfit>{this.getLine(i)}</Textfit>)
+        return Array(eval(this.props.n)).fill(null).map((i) => <p style={{fontSize: this.context}}>{this.getLine(i)}</p>)
     }
 
     getLine(i) {

@@ -12,19 +12,12 @@
   src: url(19190.ttf);
 }
 
-p {
-  font-family: ClearFont;
-  white-space: pre;
-  align-self: left;
-  color: white;
-}
-
 .left-pos {
   position: relative;
   float: right;
 }
 
-.line div div {
+.line {
   font-family: ClearFont;
   white-space: pre !important;
   align-self: left;
@@ -33,4 +26,53 @@ p {
   -webkit-text-size-adjust: 2.5 !important;
   -ms-text-size-adjust: 2.5 !important;
   letter-spacing: 0.1em;
+}
+
+.line div{
+  font-family: ClearFont;
+  white-space: pre !important;
+  align-self: left;
+  color: white;
+  -moz-text-size-adjust: 2.5 !important;
+  -webkit-text-size-adjust: 2.5 !important;
+  -ms-text-size-adjust: 2.5 !important;
+  letter-spacing: 0.1em;
+  /* width: 100vw !important; */
+}
+
+p{
+  font-family: ClearFont;
+  white-space: pre !important;
+  align-self: left;
+  color: white;
+  -moz-text-size-adjust: 2.5 !important;
+  -webkit-text-size-adjust: 2.5 !important;
+  -ms-text-size-adjust: 2.5 !important;
+  letter-spacing: 0.1em;
+  /* width: 100vw !important; */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.l1 .l2 .l3 {
+  position: relative !important;
+}
+
+.l1 {
+  z-index: 3 !important;
+}
+
+.l2 {
+  z-index: 2 !important;
+}
+
+.l3 {
+  z-index: 1 !important;
+}
+
+.layer {
+  position: relative;
 }

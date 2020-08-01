@@ -1,5 +1,5 @@
 import React from 'react';
-import Textfit from 'react-textfit';
+import {FontSize} from './FontSize';
 import './Hat.css';
 
 class Portrait extends React.Component {
@@ -7,24 +7,25 @@ class Portrait extends React.Component {
       super(props);
       this.state = {};
     }
+    static contextType = FontSize;
     
     render() {
       return (
         <div className="line">
-            <Textfit>                                                                                 |-------------|    </Textfit>
-            <Textfit>                                                                                 |     __      |    </Textfit>
-            <Textfit>                                                                                 |    |___&#92;    |    </Textfit>
-            <Textfit>                                                                                 |   &#47;     &#92;   |    </Textfit>
-            <Textfit>                                                                                 |   |     |   |    </Textfit>
-            <Textfit>                                                                                 |   |_  _ &#47;|  |    </Textfit>
-            <Textfit>                                                                                 |   |&#62;| &#60; ||  |    </Textfit>
-            <Textfit>                                                                                 |   &#92;&#47;()&#92; &#47;   |    </Textfit>
-            <Textfit>                                                                                 |    |^^  |   |    </Textfit>
-            <Textfit>                                                                                 |    &#92;-- &#47;    |    </Textfit>
-            <Textfit>                                                                                 |    |&#92;_&#47;|&#92;   |    </Textfit>
-            <Textfit>                                                                                 |  _&#47;&#92;   | &#92;_ |    </Textfit>
-            <Textfit>                                                                                 | &#47;   &#92;  &#47;   &#92;|    </Textfit>
-            <Textfit>                                                                                 |-------------|    </Textfit>
+            <p style={{fontSize: this.context}}>                                                                                 |-------------|    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |     __      |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |    |___&#92;    |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |   &#47;     &#92;   |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |   |     |   |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |   |_  _ &#47;|  |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |   |&#62;| &#60; ||  |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |   &#92;&#47;()&#92; &#47;   |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |    |^^  |   |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |    &#92;-- &#47;    |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |    |&#92;_&#47;|&#92;   |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |  _&#47;&#92;   | &#92;_ |    </p>
+            <p style={{fontSize: this.context}}>                                                                                 | &#47;   &#92;  &#47;   &#92;|    </p>
+            <p style={{fontSize: this.context}}>                                                                                 |-------------|    </p>
         </div>
       );
     }

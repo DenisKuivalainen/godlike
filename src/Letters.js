@@ -1,21 +1,22 @@
 import React from 'react';
-import Textfit from 'react-textfit';
+import {FontSize} from './FontSize';
 
 class Letters extends React.Component {
     constructor(props) {
       super(props);
       this.state = {};
     }
+    static contextType = FontSize;
 
     render() {
         return(
             <div className="line">
-                <Textfit mode="single">{this.getWord(0)}</Textfit>
-                <Textfit mode="single">{this.getWord(1)}</Textfit>
-                <Textfit mode="single">{this.getWord(2)}</Textfit>
-                <Textfit mode="single">{this.getWord(3)}</Textfit>
-                <Textfit mode="single">{this.getWord(4)}</Textfit>
-                <Textfit mode="single">{this.getWord(5)}</Textfit>
+                <p style={{fontSize: this.context}}>{this.getWord(0)}</p>
+                <p style={{fontSize: this.context}}>{this.getWord(1)}</p>
+                <p style={{fontSize: this.context}}>{this.getWord(2)}</p>
+                <p style={{fontSize: this.context}}>{this.getWord(3)}</p>
+                <p style={{fontSize: this.context}}>{this.getWord(4)}</p>
+                <p style={{fontSize: this.context}}>{this.getWord(5)}</p>
             </div>
         )
     }
