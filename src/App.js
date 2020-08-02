@@ -2,6 +2,7 @@ import React from 'react';
 import Letters from './Letters';
 import Portrait from './Portrait';
 import Ramka from './Ramka';
+import {info} from './Info';
 import {FontSize} from './FontSize';
 import './App.css';
 
@@ -20,19 +21,23 @@ class App extends React.Component {
       <FontSize.Provider value={this.state.h}>
         <div className="l1" style={{zIndex: 1}}>
           <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
-          <Letters word='Denis' />
+          <Letters word={info.name} />
           <p style={{fontSize: this.state.h}}> </p>
-          <Letters word='Kuivalainen' />
+          <Letters word={info.sur} />
+          <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
+
+          <p style={{fontSize: this.state.h}} />
+
           <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
         </div>
-        <div className="l2" style={{zIndex: 2}}>
+        {/* <div className="l2" style={{zIndex: 2}}>
           <p style={{fontSize: this.state.h}}> <br/> </p>
           <Portrait />
           <p style={{fontSize: this.state.h}}> <br/> </p>
         </div>
         <div className="l3" style={{zIndex: 3}}>
           <Ramka />
-        </div>
+        </div> */}
       </FontSize.Provider>
     );
   }
