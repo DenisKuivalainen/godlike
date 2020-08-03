@@ -1,5 +1,5 @@
 import React from 'react';
-import {FontSize} from './FontSize';
+import {FontSize} from './helpers/FontSize';
 
 class Letters extends React.Component {
     constructor(props) {

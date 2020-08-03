@@ -19,22 +19,27 @@ export const info = {
             uni: 'South-Eastern Finland University of Applied Sciences - XAMK',
             time: '2016 - present',
             prof: 'Bachelor of Engineering, Information Technology'
+        },
+        {
+            uni: 'Russian Technological University - MIREA',
+            time: '2016 - 2020',
+            prof: 'Bachelor of applied informatics in economics'
         }
     ],
     add: [
         {
-            name: 'Summer IT School at CROC',
+            name: 'Summer IT School at JSC CROC incorporated',
             year: '2018',
             spec: [
                 'Telecommunications'
             ]
         },
         {
-            name: 'Summer IT School at CROC',
+            name: 'Schneider Energy University',
             year: '2018',
             spec: [
-                'Examining Fire Protection Methods in the Data',
-                'CenterFundamentals of AvailabilityFundamental',
+                'Examining Fire Protection Methods in the Data center',
+                'Fundamentals of Availability',
                 'Cabling Strategies for Data Centers',
                 'Fundamentals of Power',
                 'Optimizing Cooling Layouts for the Data Center',

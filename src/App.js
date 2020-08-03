@@ -2,8 +2,11 @@ import React from 'react';
 import Letters from './Letters';
 import Portrait from './Portrait';
 import Ramka from './Ramka';
-import {info} from './Info';
-import {FontSize} from './FontSize';
+import LeftInfo from './info/LeftInfo'
+
+
+import {info} from './helpers/Info';
+import {FontSize} from './helpers/FontSize';
 import './App.css';
 
 class App extends React.Component {
@@ -19,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <FontSize.Provider value={this.state.h}>
-        <div className="l1" style={{zIndex: 1}}>
+        <div className="l1" style={{zIndex: 1, width: '100vw'}}>
           <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
           <Letters word={info.name} />
           <p style={{fontSize: this.state.h}}> </p>
@@ -29,6 +32,8 @@ class App extends React.Component {
           <p style={{fontSize: this.state.h}} />
 
           <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
+
+          <LeftInfo/>
         </div>
         {/* <div className="l2" style={{zIndex: 2}}>
           <p style={{fontSize: this.state.h}}> <br/> </p>
@@ -43,7 +48,7 @@ class App extends React.Component {
   }
 
   gH() {
-    let h = window.innerWidth *5 / 300;
+    let h = Math.floor(window.innerWidth *500000 / 300) / 100000;
     h += 'px';
     console.log(h)
     this.setState({h: h})
