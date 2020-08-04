@@ -2,7 +2,8 @@ import {info} from '../helpers/Info';
 import {parser} from '../helpers/parser';
 
 export function getRight() {
-    return getEdu().concat(getAdd()).concat(getSkill());
+    // return getEdu().concat(getAdd()).concat(getSkill());
+    return getEdu().concat(getSkill());
 }
 
 function getEdu() {

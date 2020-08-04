@@ -1,46 +1,29 @@
-import React from 'react';
-import {FontSize} from './helpers/FontSize';
-
-class Letters extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-    static contextType = FontSize;
-
-    render() {
-        return(
-            <div className="line">
-                <p style={{fontSize: this.context}}>{this.getWord(0)}</p>
-                <p style={{fontSize: this.context}}>{this.getWord(1)}</p>
-                <p style={{fontSize: this.context}}>{this.getWord(2)}</p>
-                <p style={{fontSize: this.context}}>{this.getWord(3)}</p>
-                <p style={{fontSize: this.context}}>{this.getWord(4)}</p>
-                <p style={{fontSize: this.context}}>{this.getWord(5)}</p>
-            </div>
-        )
+export function getName(w) {
+    let arr = [];
+    for (let i = 0; i < 6; i++) {
+        arr.push(getWord(w, i));
     }
 
-    getLetter(l) {
-        return ABC.indexOf(l);
-    }
-
-    getCode(l, n) {
-        return BIT[this.getLetter(l)][n];
-    }
-
-    getWord(n) {
-        let a = '     ';
-        let b = this.props.word.toLowerCase();
-        for (let i = 0; i < b.length; i++) {
-            a = a + ' ' + this.getCode(b.substr(i, 1), n);
-        }
-        while(a.length < 100) {
-            a += ' ';
-        }
-        return a;
-    }
+    return arr;
 }
+
+function getLetter(l) {
+    return ABC.indexOf(l);
+}
+
+function getLCode(l, n) {
+    return BIT[getLetter(l)][n];
+}
+
+function getWord(w, n) {
+    let a = '     ';
+    let b = w.toLowerCase();
+    for (let i = 0; i < b.length; i++) {
+        a = a + ' ' + getLCode(b.substr(i, 1), n);
+    }
+    return a;
+}
+
 const BIT = [
     //0
     ['  A ', ' A A', ' A A', ' AAA', 'A  A', 'A  A'],
@@ -97,5 +80,3 @@ const BIT = [
 ]
 
 const ABC = 'abcdefghijklmnopqrstuvwxyz';
-
-export default Letters;

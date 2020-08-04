@@ -1,8 +1,6 @@
 import React from 'react';
-import Letters from './Letters';
-import Portrait from './Portrait';
-import Ramka from './Ramka';
-import LeftInfo from './info/LeftInfo'
+import Ramka from './hat/Ramka';
+import RenderInfo from './info/RenderInfo'
 
 
 import {info} from './helpers/Info';
@@ -23,17 +21,14 @@ class App extends React.Component {
     return (
       <FontSize.Provider value={this.state.h}>
         <div className="l1" style={{zIndex: 1, width: '100vw'}}>
-          <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
-          <Letters word={info.name} />
-          <p style={{fontSize: this.state.h}}> </p>
-          <Letters word={info.sur} />
+          <Ramka />
           <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
 
           <p style={{fontSize: this.state.h}} />
 
           <p style={{fontSize: this.state.h}}> <br/> <br/> </p>
 
-          <LeftInfo/>
+          <RenderInfo/>
         </div>
         {/* <div className="l2" style={{zIndex: 2}}>
           <p style={{fontSize: this.state.h}}> <br/> </p>
