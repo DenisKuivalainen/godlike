@@ -32,7 +32,7 @@ function getInfo() {
     }
     cont.push(getLine(''));
     cont.push(getLine(''));
-    cont.push(getLine(''));
+    //cont.push(getLine(''));
 
     return cont;
 }
@@ -52,7 +52,7 @@ function getQuol() {
 
     cont.push(getLine(''));
     cont.push(getLine(''));
-    cont.push(getLine(''));
+    //cont.push(getLine(''));
 
     return cont;
 }
@@ -69,7 +69,7 @@ function getLang() {
         cont.push(getLine(''));
     }
     cont.push(getLine(''));
-    cont.push(getLine(''));
+    //cont.push(getLine(''));
 
     return cont;
 }
@@ -77,7 +77,7 @@ function getLang() {
 function getGit() {
     let cont = [];
     cont.push(getLine(getBorder()));
-    cont.push(getLine(end('|      >Github')));
+    cont.push(getLine(end('|      >Links')));
     cont.push(getLine(getBorder()));
     cont.push(getLine(''));
 

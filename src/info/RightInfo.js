@@ -100,10 +100,8 @@ function getSkill() {
             }
 
             cont.push(getLine(''));
-            cont.push(getLine(''));
         }
-        
-        
+        cont.push(getLine(''));
     }
 
     cont.push(getLine(''));

@@ -14,6 +14,7 @@ export const info = {
         'Russian (native)'
     ],
     git: 'github.com/DenisKuivalainen',
+    lki: 'https://www.linkedin.com/in/denis-kuivalainen-36119a1a3/',
     edu: [
         {
             uni: 'South-Eastern Finland University of Applied Sciences - XAMK',
@@ -71,7 +72,7 @@ export const info = {
             ]
         }
     ],
-    proj: [
+    proj: [     
 
     ],
     work: [
@@ -91,7 +92,7 @@ export const info = {
             link: ''
         },
         {
-            name: 'Designing forecasting cargo quotas EIS',
+            name: 'THESIS: Designing forecasting cargo quotas EIS',
             disc: 'Analysis and description of the existing process execution and development new methodic based on the identified drawbacks of the EIS.',
             link: ''
         },

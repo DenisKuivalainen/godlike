@@ -3,6 +3,7 @@ import { FontSize } from '../helpers/FontSize';
 import {info} from '../helpers/Info';
 import {getLeft} from './LeftInfo';
 import {getRight} from './RightInfo';
+import {cFl, cCl, cLn, cSp} from '../helpers/Cell';
 
 class RenderInfo extends React.Component {
     constructor(props) {
@@ -32,17 +33,31 @@ class RenderInfo extends React.Component {
 
     getRender2() {
         let a = this.state.right[this.state.left.length];
-        a = '|' + a.substr(1, a.length)
+        a = '|' + a.substr(1, a.length);
+
+        let b = this.state.right[this.state.left.length + 2];
+        b = '|' + b.substr(1, a.length);
+
         return(
-            <p style={{fontSize: this.context}}>{a + ' '}
-                <a href={info.git} style={{fontSize: this.context}}>{info.git}</a>
-                {'' + this.fillA()}
-            </p>
+            <div>
+                <p style={{fontSize: this.context}}>{a + ' '}
+                    <a href={info.git} style={{fontSize: this.context}}>{LINKS[0]}</a>
+                    {'' + this.fillA(0)}
+                </p>
+                <p style={{fontSize: this.context}}>{this.fillB(this.state.right[this.state.left.length + 1])}</p>
+                <p style={{fontSize: this.context}}>{b + ' '}
+                    <a href={info.lki} style={{fontSize: this.context}}>{LINKS[1]}</a>
+                    {'' + this.fillA(1)}
+                </p>
+                <p style={{fontSize: this.context}}>{cSp()}</p>
+                <p style={{fontSize: this.context}}>{cSp()}</p>
+                <p style={{fontSize: this.context}}>{cSp()}</p>
+            </div>
         )
     }
-    fillA() {
+    fillA(n) {
         let a = '';
-        while (a.length < 31 - info.git.length) {
+        while (a.length < 31 - LINKS[n].length) {
             a += ' ';
         }
         a += '|';
@@ -50,7 +65,8 @@ class RenderInfo extends React.Component {
     }
 
     getRender3() {
-        let a = this.state.right.slice(this.state.left.length + 1);
+        let a = this.state.right.slice(this.state.left.length + 3, this.state.right.length - this.state.left.length - 5);
+        
         return a.map((val, i) => 
             <p id={'info_2_' + i} style={{fontSize: this.context}}>{this.fillB(val)}</p>
         )
@@ -68,4 +84,5 @@ class RenderInfo extends React.Component {
     
 }
 
+const LINKS = ["* GitHub", "* LinkedIn"]
 export default RenderInfo;
