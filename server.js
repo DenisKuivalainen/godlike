@@ -7,8 +7,8 @@ const app = express();
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/listener', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'gen.html'));
+app.get('/geoplugin_activation.html', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'geoplugin_activation.html'));
 });
  
 app.get('/*', function (req, res) {
