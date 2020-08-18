@@ -3,7 +3,7 @@ import { FontSize } from '../helpers/FontSize';
 import {info} from '../helpers/Info';
 import {getLeft} from './LeftInfo';
 import {getRight} from './RightInfo';
-import {cFl, cCl, cLn, cSp} from '../helpers/Cell';
+import {cSp} from '../helpers/Cell';
 
 class RenderInfo extends React.Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class RenderInfo extends React.Component {
 
     getRender1() {
         return this.state.left.map((val, i) => 
-            <p id={'info_1_' + i} style={{fontSize: this.context}}>{'|' + (this.state.right[i] + val).substr(1, 98) + '|'}</p>
+            <p key={'info_1_' + i} style={{fontSize: this.context}}>{'|' + (this.state.right[i] + val).substr(1, 98) + '|'}</p>
         )
     }
 

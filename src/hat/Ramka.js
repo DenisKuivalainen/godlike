@@ -22,7 +22,6 @@ class Ramka extends React.Component {
 
     getRender() {
       let arr = this.getLine();
-      console.log(arr.length)
       // let arr = this.getLine();
 
       return arr.map((val, k) => <p id={'hat_' + k} style={{fontSize: this.context}}>{val}</p>)

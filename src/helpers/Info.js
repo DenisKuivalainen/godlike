@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const info = {
     name: 'Denis',
     sur: 'Kuivalainen',
@@ -72,8 +70,43 @@ export const info = {
             ]
         }
     ],
-    proj: [     
-
+    proj: [    
+        {
+            name: 'FEEDM3',
+            desc: 'Cooking book using React, Node.js and Postgresql.',
+            web: 'http://feedm3.herokuapp.com/',
+            git: 'https://github.com/DenisKuivalainen/softdevproj',
+        },
+        {
+            name: 'FEEDM3 mobile',
+            desc: 'Cooking book Android version using Vue Native.',
+            web: 'http://feedm3.herokuapp.com/download',
+            git: 'https://github.com/DenisKuivalainen/FEEDM3-mobile',
+        },
+        {
+            name: 'Calculatronz',
+            desc: 'Web calculator, but all calculations are done on server side.',
+            web: 'http://calculatronz.herokuapp.com/',
+            git: 'https://github.com/DenisKuivalainen/Calculator-react',
+        },
+        {
+            name: 'Maria Dikki',
+            desc: 'In progress: webpage for art disigner using React and VKontakte API.',
+            web: 'https://mariadikki.herokuapp.com/',
+            git: 'https://github.com/DenisKuivalainen/mariadikki',
+        },
+        // {
+        //     name: 'Beyend',
+        //     desc: 'In progress: 2d platformer on Unity engine c#.',
+        //     web: 'https://beyend.herokuapp.com/',
+        //     git: 'https://github.com/DenisKuivalainen/beyend',
+        // },
+        // {
+        //     name: 'X! O! Super',
+        //     desc: 'TicTacToe 5x5 on Java using Swing as user interface.',
+        //     web: 'https://drive.google.com/open?id=1EZ8Md8h1PbMlpLJE3GEkYdsUSRvgor7t',
+        //     git: 'https://github.com/DenisKuivalainen/Tic-Tac-Toe/tree/5x5',
+        // },
     ],
     work: [
         {

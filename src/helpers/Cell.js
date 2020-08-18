@@ -1,3 +1,4 @@
+// заполняет строку ln пробелами, пока в ней не будет lg символов
 export function cFl(ln, lg) {
     let a = ln;
     while(a.length < lg) {
@@ -6,10 +7,12 @@ export function cFl(ln, lg) {
     return a;
 }
 
+// берет линию ln в рамку
 export function cCl(ln) {
-    return '|' + ln.substr(1, 98) + '|';
+    return '|' + ln.substr(1, ln.length - 2) + '|';
 }
 
+// возвращает линию
 export function cLn() {
     let a = '|';
     while(a.length < 99) {
@@ -18,10 +21,12 @@ export function cLn() {
     return a + '|';
 }
 
+// возвращает пустую строку
 export function cSp() {
     return cCl(cFl('', 100))
 }
 
+// отступает слува lft, затем рисует линию
 export function cBd(lft, lng) {
     let a = ''
     while(a.length < lft) {
