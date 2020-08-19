@@ -1,62 +1,10 @@
 import React from 'react';
 
-import {FontSize} from './helpers/FontSize';
-import {info} from './helpers/Info';
-import {cFl, cCl, cSp} from './helpers/Cell';
-import {parser} from './helpers/parser';
+import {FontSize} from '../helpers/FontSize';
+import {cFl, cCl} from '../helpers/Cell';
+import {parser} from '../helpers/parser';
 
-class Boxes extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-    static contextType = FontSize;
-
-    fillArr() {
-        let work = info.proj;
-        let arr = [];
-        let sub = [];
-        let n = 0;
-
-        for (let i = 0; i < work.length; i++) {
-            sub.push(work[i]);
-            n += 1;
-            
-            if(n > 2) {
-                n = 0;
-                arr.push(sub);
-                sub = []
-            }
-        }
-
-        if(n < 2) {
-            n = 0;
-            arr.push(sub);
-            sub = []
-        }
-
-        return arr;
-    }
-
-    render() {
-        return(
-            <div>
-                {this.fillArr().map((val, i) => <Box projs={val} key={i} size={this.context} />)}
-            </div>
-        )
-    }
-}
-
-function Box(props) {
-    return(
-        <div>
-            <Top projs={props.projs} top='yay' />
-            <Top projs={props.projs} />
-            <p style={{fontSize: props.size}}>{cSp()}</p>
-        </div>            
-    )
-}
-
-class Top extends React.Component {
+export default class Top extends React.Component {
     constructor(props) {
       super(props);
       this.state = {};
@@ -73,7 +21,7 @@ class Top extends React.Component {
     }
 
     name(name) {
-        return cCl(cFl('|    >' + name, 28));
+        return cCl(cFl('|    > ' + name, 28));
     }
 
     text(desc) {
@@ -130,7 +78,7 @@ class Top extends React.Component {
                 let sub = this.buildTop(this.props.projs[i]);
 
                 for (let j = 0; j < 10; j++) {
-                    arr[j] = arr[j] + sub [j] + '   ';
+                    arr[j] += sub [j] + '   ';
                 }
             }
         } else {
@@ -139,7 +87,7 @@ class Top extends React.Component {
                 let sub = this.buildBtm(this.props.projs[i]);
 
                 for (let j = 0; j < 2; j++) {
-                    arr[j] = arr[j] + sub [j] + '   ';
+                    arr[j] += sub [j] + '   ';
                 }
             }
             arr.push('');
@@ -165,5 +113,3 @@ class Top extends React.Component {
     }
 
 }
-
-export default Boxes;

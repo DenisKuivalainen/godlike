@@ -16,11 +16,11 @@ export function parser(str, lng) {
                 } else {
                     line += word;
                 }
-                word = '';
             } else {
                 arr.push(line);
                 line = word;
             }
+            word = '';
         }
     }
 

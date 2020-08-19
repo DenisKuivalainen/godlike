@@ -93,14 +93,14 @@ export const info = {
             name: 'Maria Dikki',
             desc: 'In progress: webpage for art disigner using React and VKontakte API.',
             web: 'https://mariadikki.herokuapp.com/',
-            git: 'https://github.com/DenisKuivalainen/mariadikki',
+            git: 'https://github.com/DenisKuivalai nen/mariadikki',
         },
-        // {
-        //     name: 'Beyend',
-        //     desc: 'In progress: 2d platformer on Unity engine c#.',
-        //     web: 'https://beyend.herokuapp.com/',
-        //     git: 'https://github.com/DenisKuivalainen/beyend',
-        // },
+        {
+            name: 'Beyend',
+            desc: 'In progress: 2d platformer game on Unity engine c#.',
+            web: 'https://beyend.herokuapp.com/',
+            git: 'https://github.com/DenisKuivalainen/beyend',
+        },
         // {
         //     name: 'X! O! Super',
         //     desc: 'TicTacToe 5x5 on Java using Swing as user interface.',

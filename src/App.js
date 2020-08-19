@@ -2,7 +2,7 @@ import React from 'react';
 import Ramka from './hat/Ramka';
 import RenderInfo from './info/RenderInfo';
 import Work from './Projects/Work';
-import Boxes from './Boxes';
+import Boxes from './box/Boxes';
 
 import {FontSize} from './helpers/FontSize';
 import {cLn} from './helpers/Cell';
