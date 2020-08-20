@@ -9,18 +9,20 @@ class Buttons extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            web1: false,
-            web2: false,
-            web3: false,
-            git1: false,
-            git2: false,
-            git3: false,
+            style: {
+                web1: 0,
+                web2: 0,
+                web3: 0,
+                git1: 0,
+                git2: 0,
+                git3: 0,
+            }
         };
     }
     static contextType = FontSize;
 
-    getActive(bl) {
-        return bl ? {color: "#00cc00"} : {color: "#ffffff"};
+    getStyle(arg) {
+        return this.state.style[arg] > 0 ? {color: "#00cc00"} : {color: "#ffffff"};
     }
 
     getBorder(val) {
@@ -76,10 +78,24 @@ class Buttons extends React.Component {
         }
     }
 
+    getActive = (arg) => {
+        let obj = this.state.style;
+        obj[arg] += 1;
+        this.setState({style: obj});
+    }
+
+    getPassive = (arg) => {
+        let obj = this.state.style;
+        obj[arg] -= 1;
+        this.setState({style: obj});
+    }
+
     buttonB(arg) {
         return(
             <a 
-                style={this.getActive(eval('this.state.' + arg))} 
+                style={this.getStyle(arg)} 
+                onMouseOver={() => this.getActive(arg)}
+                onMouseOut={() => this.getPassive(arg)}
                 href={this.props.projs[parseInt(arg.substr(3, 1))-1][arg.substr(0, 3)]}
             >|-------|</a>
         )
@@ -89,7 +105,9 @@ class Buttons extends React.Component {
         let val =arg.substr(0, 3);
         return(
             <a 
-                style={this.getActive(eval('this.state.' + arg))} 
+                style={this.getStyle(arg)} 
+                onMouseOver={() => this.getActive(arg)}
+                onMouseOut={() => this.getPassive(arg)}
                 href={this.props.projs[parseInt(arg.substr(3, 1))-1][val]}
             >{'|  ' + val + '  |'}</a>
         )

@@ -4,6 +4,7 @@ import Box from './Box';
 
 import {FontSize} from '../helpers/FontSize';
 import {info} from '../helpers/Info';
+import {cFl, cCl, cSp, cBd} from '../helpers/Cell';
 
 class Boxes extends React.Component {
     constructor(props) {
@@ -37,9 +38,26 @@ class Boxes extends React.Component {
         return arr;
     }
 
+    getTitle() {
+        let arr = [];
+
+        arr.push(cCl(cFl(cBd(3, 94), 100)));
+        arr.push(cCl(cFl(cFl('   |     >Projects', 96) + '|', 100)));
+        arr.push(cCl(cFl(cBd(3, 94), 100)));
+        arr.push(cSp());
+        arr.push(cSp());
+
+        return arr;
+    }
+
     render() {
         return(
             <div>
+                {
+                    this.getTitle().map((n, i) => 
+                        <p id={'work_t_' + i} style={{fontSize: this.context}}>{n}</p>
+                    )
+                }
                 {this.fillArr().map((val, i) => <Box projs={val} key={i} size={this.context} />)}
             </div>
         )

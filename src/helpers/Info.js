@@ -101,18 +101,23 @@ export const info = {
             web: 'https://beyend.herokuapp.com/',
             git: 'https://github.com/DenisKuivalainen/beyend',
         },
-        // {
-        //     name: 'X! O! Super',
-        //     desc: 'TicTacToe 5x5 on Java using Swing as user interface.',
-        //     web: 'https://drive.google.com/open?id=1EZ8Md8h1PbMlpLJE3GEkYdsUSRvgor7t',
-        //     git: 'https://github.com/DenisKuivalainen/Tic-Tac-Toe/tree/5x5',
-        // },
+        {
+            name: 'X! O! Super',
+            desc: 'TicTacToe 5x5 on Java using Swing as user interface.',
+            web: 'https://drive.google.com/open?id=1EZ8Md8h1PbMlpLJE3GEkYdsUSRvgor7t',
+            git: 'https://github.com/DenisKuivalainen/Tic-Tac-Toe/tree/5x5',
+        },
     ],
     work: [
         {
             name: 'Desktop apps on Python',
             disc:'Development OOP apps - practicing methods, working with files and API.',
             link: 'https://github.com/DenisKuivalainen/Python_test'
+        },
+        {
+            name: 'Mobile apps',
+            disc:'Development mobile apps - React native, vue native, native modules and PWA.',
+            link: 'https://github.com/DenisKuivalainen/native-apps'
         },
         {
             name: 'Software Development Modeling',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {cFl, cCl, cLn, cSp, cBd} from '../helpers/Cell';
+import {cFl, cCl, cSp, cBd} from '../helpers/Cell';
 import {info} from '../helpers/Info';
 import {FontSize} from '../helpers/FontSize';
 import {parser} from '../helpers/parser';

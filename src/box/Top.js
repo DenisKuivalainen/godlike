@@ -21,7 +21,7 @@ export default class Top extends React.Component {
     }
 
     name(name) {
-        return cCl(cFl('|    > ' + name, 28));
+        return cCl(cFl('|    >' + name, 28));
     }
 
     text(desc) {
@@ -48,7 +48,6 @@ export default class Top extends React.Component {
         arr.push(this.name(proj.name));
         arr.push(this.line());
         arr.push(cCl(cFl('', 28)));
-        //arr.concat(this.text(proj.desc));
 
         let sub = this.text(proj.desc);
         sub.forEach(element => {
@@ -102,7 +101,6 @@ export default class Top extends React.Component {
     }
 
     render() {
-        {console.log(this.props.projs)}
         return(
             <div>
                 {this.build().map((val, i) => {
