@@ -53,7 +53,7 @@ export const info = {
                 'JavaScript (React, Node.js, Express)',
                 'C# (MVC, Xamarin mobile programming, Unity)',
                 'SQL (MySQL, Apache Phoenix, PostgreSQL)',
-                'Experience with Java,  PHP, Python'
+                'Experience with Java, PHP, Python, Vue js'
             ]
         },
         {
