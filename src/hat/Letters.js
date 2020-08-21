@@ -1,4 +1,4 @@
-export function getName(w) {
+export function generateName(w) {
     let arr = [];
     for (let i = 0; i < 6; i++) {
         arr.push(getWord(w, i));
@@ -11,7 +11,7 @@ function getLetter(l) {
     return ABC.indexOf(l);
 }
 
-function getLCode(l, n) {
+function getLetterCode(l, n) {
     return BIT[getLetter(l)][n];
 }
 
@@ -19,7 +19,7 @@ function getWord(w, n) {
     let a = '     ';
     let b = w.toLowerCase();
     for (let i = 0; i < b.length; i++) {
-        a = a + ' ' + getLCode(b.substr(i, 1), n);
+        a = a + ' ' + getLetterCode(b.substr(i, 1), n);
     }
     return a;
 }

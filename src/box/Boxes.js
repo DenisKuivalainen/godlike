@@ -58,7 +58,7 @@ class Boxes extends React.Component {
                         <p id={'work_t_' + i} style={{fontSize: this.context}}>{n}</p>
                     )
                 }
-                {this.fillArr().map((val, i) => <Box projs={val} key={i} size={this.context} />)}
+                {this.fillArr().map((val, i) => <Box projects={val} key={i} size={this.context} />)}
             </div>
         )
     }

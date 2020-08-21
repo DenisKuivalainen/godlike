@@ -1,9 +1,8 @@
 import React from 'react';
-import {getName} from './Letters';
+import {generateName} from './Letters';
 import {info} from '../helpers/Info';
 import { FontSize } from '../helpers/FontSize';
 import {cFl, cCl, cLn, cSp} from '../helpers/Cell'
-import './Hat.css';
 
 class Ramka extends React.Component {
     constructor(props) {
@@ -14,8 +13,8 @@ class Ramka extends React.Component {
     
     render() {
       return (
-            <div>
-                {this.getRender()}
+        <div>
+          {this.getRender()}
         </div>
       );
     }
@@ -29,7 +28,7 @@ class Ramka extends React.Component {
 
     getFullName() {
       let arr = ['   '];
-      return arr.concat(getName(info.name)).concat('   ').concat('   ').concat(getName(info.sur)).concat('   ');
+      return arr.concat(generateName(info.name)).concat('   ').concat('   ').concat(generateName(info.sur)).concat('   ');
     }
 
     getLine() {

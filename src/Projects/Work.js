@@ -56,7 +56,7 @@ class Work extends React.Component {
             let cp = parser(work.disc, 92);
             let c = cp.map((val) => <p style={{fontSize: this.context}}>{cCl(cFl('    ' + val, 100))}</p>)
 
-            let d = work.link !== '' ? this.getD(work.link) : '';
+            let d = work.link !== '' ? this.getWorkLink(work.link) : '';
 
             return (
                 <div>
@@ -70,7 +70,7 @@ class Work extends React.Component {
         })
     }
 
-    getD(link) {
+    getWorkLink(link) {
         let lng = link.length;
         let a = '|  ';
 
@@ -79,8 +79,6 @@ class Work extends React.Component {
             b += ' '
         }
         b += '|'
-
-        // let c = link === '' ? '' : '*' + link
 
         return(
             <p style={{fontSize: this.context}}>

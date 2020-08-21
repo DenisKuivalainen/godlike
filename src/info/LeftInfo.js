@@ -2,7 +2,7 @@ import {info} from '../helpers/Info';
 import {parser} from '../helpers/parser';
 
 export function getLeft() {
-    return getInfo().concat(getQuol()).concat(getLang()).concat(getGit());
+    return getInfo().concat(getQuolities()).concat(getLanguages()).concat(getLinks());
 }
 
 function getInfo() {
@@ -37,7 +37,7 @@ function getInfo() {
     return cont;
 }
 
-function getQuol() {
+function getQuolities() {
     let cont = [];
     cont.push(getLine(getBorder()));
     cont.push(getLine(end('|      >Quolities')));
@@ -57,7 +57,7 @@ function getQuol() {
     return cont;
 }
 
-function getLang() {
+function getLanguages() {
     let cont = [];
     cont.push(getLine(getBorder()));
     cont.push(getLine(end('|      >Languages')));
@@ -74,7 +74,7 @@ function getLang() {
     return cont;
 }
 
-function getGit() {
+function getLinks() {
     let cont = [];
     cont.push(getLine(getBorder()));
     cont.push(getLine(end('|      >Links')));

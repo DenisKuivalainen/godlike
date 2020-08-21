@@ -42,12 +42,12 @@ class RenderInfo extends React.Component {
             <div>
                 <p style={{fontSize: this.context}}>{a + ' '}
                     <a href={info.git} style={{fontSize: this.context}}>{LINKS[0]}</a>
-                    {'' + this.fillA(0)}
+                    {'' + this.fillType1(0)}
                 </p>
-                <p style={{fontSize: this.context}}>{this.fillB(this.state.right[this.state.left.length + 1])}</p>
+                <p style={{fontSize: this.context}}>{this.fillType2(this.state.right[this.state.left.length + 1])}</p>
                 <p style={{fontSize: this.context}}>{b + ' '}
                     <a href={info.lki} style={{fontSize: this.context}}>{LINKS[1]}</a>
-                    {'' + this.fillA(1)}
+                    {'' + this.fillType1(1)}
                 </p>
                 <p style={{fontSize: this.context}}>{cSp()}</p>
                 <p style={{fontSize: this.context}}>{cSp()}</p>
@@ -55,7 +55,16 @@ class RenderInfo extends React.Component {
             </div>
         )
     }
-    fillA(n) {
+
+    getRender3() {
+        let a = this.state.right.slice(this.state.left.length + 3, this.state.right.length - this.state.left.length - 5);
+        
+        return a.map((val, i) => 
+            <p id={'info_2_' + i} style={{fontSize: this.context}}>{this.fillType2(val)}</p>
+        )
+    }
+
+    fillType1(n) {
         let a = '';
         while (a.length < 31 - LINKS[n].length) {
             a += ' ';
@@ -64,15 +73,7 @@ class RenderInfo extends React.Component {
         return a
     }
 
-    getRender3() {
-        let a = this.state.right.slice(this.state.left.length + 3, this.state.right.length - this.state.left.length - 5);
-        
-        return a.map((val, i) => 
-            <p id={'info_2_' + i} style={{fontSize: this.context}}>{this.fillB(val)}</p>
-        )
-    }
-
-    fillB(val) {
+    fillType2(val) {
         let a = '|' + val.substr(1);
 
         while (a.length < 99) {

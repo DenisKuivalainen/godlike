@@ -2,11 +2,11 @@ import {info} from '../helpers/Info';
 import {parser} from '../helpers/parser';
 
 export function getRight() {
-    // return getEdu().concat(getAdd()).concat(getSkill());
-    return getEdu().concat(getSkill());
+    // return getEducation().concat(getAdditionalEducation()).concat(getSkill());
+    return getEducation().concat(getSkill());
 }
 
-function getEdu() {
+function getEducation() {
     let cont = [];
 
     cont.push(getLine('   ' + getBorder()));
@@ -36,7 +36,7 @@ function getEdu() {
     return cont;
 }
 
-function getAdd() {
+function getAdditionalEducation() {
     let cont = [];
 
     cont.push(getLine('   ' + getBorder()));

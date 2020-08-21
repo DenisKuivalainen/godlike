@@ -4,14 +4,13 @@ import {FontSize} from '../helpers/FontSize';
 import {cFl, cCl} from '../helpers/Cell';
 import {parser} from '../helpers/parser';
 
-export default class Top extends React.Component {
+export default class Content extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {};
     }
     static contextType = FontSize;
 
-    line() {
+    returnBorderLine() {
         let a = '';
         while(a.length < 28) {
             a += '-';
@@ -20,15 +19,15 @@ export default class Top extends React.Component {
         return cCl(a);
     }
 
-    name(name) {
-        return cCl(cFl('|    >' + name, 28));
+    returnNameLine(projectName) {
+        return cCl(cFl('|    >' + projectName, 28));
     }
 
-    text(desc) {
+    returnDecriptionLines(desc) {
         let arr = [];
-        let text = parser(desc, 22);
-        for (let j = 0; j < text.length; j++) {
-            arr.push('   ' + text[j]); 
+        let description = parser(desc, 22);
+        for (let j = 0; j < description.length; j++) {
+            arr.push('   ' + description[j]); 
         }
 
         while(arr.length < 5) {
@@ -42,14 +41,14 @@ export default class Top extends React.Component {
         return arr;
     }
 
-    buildTop(proj) {
+    buildTopPart(project) {
         let arr = [];
-        arr.push(this.line());
-        arr.push(this.name(proj.name));
-        arr.push(this.line());
+        arr.push(this.returnBorderLine());
+        arr.push(this.returnNameLine(project.name));
+        arr.push(this.returnBorderLine());
         arr.push(cCl(cFl('', 28)));
 
-        let sub = this.text(proj.desc);
+        let sub = this.returnDecriptionLines(project.desc);
         sub.forEach(element => {
             arr.push(element);
         });
@@ -59,22 +58,22 @@ export default class Top extends React.Component {
         return arr;
     }
 
-    buildBtm(proj) {
+    buildButtomPart(project) {
         let arr =[];
         arr.push(cCl(cFl('', 28)));
-        arr.push(this.line());
+        arr.push(this.returnBorderLine());
 
         return arr;
     }
 
-    build() {
+    buildBoxPart() {
         let arr = [];
 
-        if(this.props.top !== undefined) {
+        if(this.props.content !== undefined) {
             arr = Array(10).fill('     ');
 
-            for (let i = 0; i < this.props.projs.length; i++) {
-                let sub = this.buildTop(this.props.projs[i]);
+            for (let i = 0; i < this.props.projects.length; i++) {
+                let sub = this.buildTopPart(this.props.projects[i]);
 
                 for (let j = 0; j < 10; j++) {
                     arr[j] += sub [j] + '   ';
@@ -82,8 +81,8 @@ export default class Top extends React.Component {
             }
         } else {
             arr = Array(2).fill('     ');
-            for (let i = 0; i < this.props.projs.length; i++) {
-                let sub = this.buildBtm(this.props.projs[i]);
+            for (let i = 0; i < this.props.projects.length; i++) {
+                let sub = this.buildButtomPart(this.props.projects[i]);
 
                 for (let j = 0; j < 2; j++) {
                     arr[j] += sub [j] + '   ';
@@ -103,7 +102,7 @@ export default class Top extends React.Component {
     render() {
         return(
             <div>
-                {this.build().map((val, i) => {
+                {this.buildBoxPart().map((val, i) => {
                     return <p key={i} style={{fontSize: this.context}}>{val}</p>
                 })}
             </div>

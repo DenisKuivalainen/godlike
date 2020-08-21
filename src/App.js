@@ -17,7 +17,7 @@ class App extends React.Component {
       h1: 100,
       top: 0
     };
-    this.gH = this.gH.bind(this);
+    this.setFontSize = this.setFontSize.bind(this);
   }
   
   render() {
@@ -40,52 +40,22 @@ class App extends React.Component {
     );
   }
 
-  gH() {
-    // window.innerWidth
+  setFontSize() {
     let w =  window.innerWidth > document.documentElement.clientWidth ? document.documentElement.clientWidth : window.innerWidth;
-    // console.log(window.innerWidth - document.documentElement.clientWidth)
     let h = Math.floor(w *500000 / 300) / 100000;
-    //let scr = window.pageYOffset - Math.floor(window.pageYOffset / h) * h
-
-    // let mh = Math.max(
-    //   document.body.scrollHeight, document.documentElement.scrollHeight,
-    //   document.body.offsetHeight, document.documentElement.offsetHeight,
-    //   document.body.clientHeight, document.documentElement.clientHeight
-    // );
-
-
-
-    // console.log(mh - Math.floor(mh/h)*h)
-
     this.setState({h: h + 'px'})
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.gH);
-    window.addEventListener('load', this.gH);
-    window.addEventListener('scroll', this.gH);
+    window.addEventListener('resize', this.setFontSize);
+    window.addEventListener('load', this.setFontSize);
+    window.addEventListener('scroll', this.setFontSize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.gH);
-    window.removeEventListener('load', this.gH);
-    window.removeEventListener('scroll', this.gH);
-  }
-
-  makeCMD() {
-    // let scr = window.pageYOffset;
-    // let h = Math.max(
-    //   document.body.scrollHeight, document.documentElement.scrollHeight,
-    //   document.body.offsetHeight, document.documentElement.offsetHeight,
-    //   document.body.clientHeight, document.documentElement.clientHeight
-    // );
-    // let vh = document.documentElement.clientHeight;
-
-    // let cScr = window.pageYOffset;
-    // let a = this.state.h1;
-    // let prc = cScr % a;
-
-    // this.setState({top: prc})
+    window.removeEventListener('resize', this.setFontSize);
+    window.removeEventListener('load', this.setFontSize);
+    window.removeEventListener('scroll', this.setFontSize);
   }
 }
 

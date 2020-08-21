@@ -21,21 +21,21 @@ class Buttons extends React.Component {
     }
     static contextType = FontSize;
 
-    getStyle(arg) {
+    changeTextColot(arg) {
         return this.state.style[arg] > 0 ? {color: "#00cc00"} : {color: "#ffffff"};
     }
 
-    getBorder(val) {
-        let a = this.props.projs.length;
+    returnButtonLine(val) {
+        let a = this.props.projects.length;
 
         switch (a) {
             case 1:
                 return(
                     <p style={{fontSize: this.context}}>
                         {cCl(cFl('', 6)) + cFl('', 2)}
-                        {eval("this.button" + val + "('web1')")}
+                        {eval("this.makeButton" + val + "('web1')")}
                         {cFl('', 4)}
-                        {eval("this.button" + val + "('git1')")}
+                        {eval("this.makeButton" + val + "('git1')")}
                         {cFl('', 2) + cCl(cFl('', 68))}
                     </p>
                 )
@@ -44,13 +44,13 @@ class Buttons extends React.Component {
                 return(
                     <p style={{fontSize: this.context}}>
                         {cCl(cFl('', 6)) + cFl('', 2)}
-                        {eval("this.button" + val + "('web1')")}
+                        {eval("this.makeButton" + val + "('web1')")}
                         {cFl('', 4)}
-                        {eval("this.button" + val + "('git1')")}
+                        {eval("this.makeButton" + val + "('git1')")}
                         {cFl('', 2) + cCl(cFl('', 5)) + cFl('', 2)}
-                        {eval("this.button" + val + "('web2')")}
+                        {eval("this.makeButton" + val + "('web2')")}
                         {cFl('', 4)}
-                        {eval("this.button" + val + "('git2')")}
+                        {eval("this.makeButton" + val + "('git2')")}
                         {cFl('', 2) + cCl(cFl('', 37))}
                     </p>
                 )
@@ -59,17 +59,17 @@ class Buttons extends React.Component {
                 return(
                     <p style={{fontSize: this.context}}>
                         {cCl(cFl('', 6)) + cFl('', 2)}
-                        {eval("this.button" + val + "('web1')")}
+                        {eval("this.makeButton" + val + "('web1')")}
                         {cFl('', 4)}
-                        {eval("this.button" + val + "('git1')")}
+                        {eval("this.makeButton" + val + "('git1')")}
                         {cFl('', 2) + cCl(cFl('', 5)) + cFl('', 2)}
-                        {eval("this.button" + val + "('web2')")}
+                        {eval("this.makeButton" + val + "('web2')")}
                         {cFl('', 4)}
-                        {eval("this.button" + val + "('git2')")}
+                        {eval("this.makeButton" + val + "('git2')")}
                         {cFl('', 2) + cCl(cFl('', 5)) + cFl('', 2)}
-                        {eval("this.button" + val + "('web3')")}
+                        {eval("this.makeButton" + val + "('web3')")}
                         {cFl('', 4)}
-                        {eval("this.button" + val + "('git3')")}
+                        {eval("this.makeButton" + val + "('git3')")}
                         {cFl('', 2) + cCl(cFl('', 6))}
                     </p>
                 )
@@ -78,37 +78,37 @@ class Buttons extends React.Component {
         }
     }
 
-    getActive = (arg) => {
+    makeElementActive = (arg) => {
         let obj = this.state.style;
         obj[arg] += 1;
         this.setState({style: obj});
     }
 
-    getPassive = (arg) => {
+    makeElementPassive = (arg) => {
         let obj = this.state.style;
         obj[arg] -= 1;
         this.setState({style: obj});
     }
 
-    buttonB(arg) {
+    makeButtonBorder(arg) {
         return(
             <a 
-                style={this.getStyle(arg)} 
-                onMouseOver={() => this.getActive(arg)}
-                onMouseOut={() => this.getPassive(arg)}
-                href={this.props.projs[parseInt(arg.substr(3, 1))-1][arg.substr(0, 3)]}
+                style={this.changeTextColot(arg)} 
+                onMouseOver={() => this.makeElementActive(arg)}
+                onMouseOut={() => this.makeElementPassive(arg)}
+                href={this.props.projects[parseInt(arg.substr(3, 1))-1][arg.substr(0, 3)]}
             >|-------|</a>
         )
     }
 
-    buttonV(arg) {
+    makeButtonValue(arg) {
         let val =arg.substr(0, 3);
         return(
             <a 
-                style={this.getStyle(arg)} 
-                onMouseOver={() => this.getActive(arg)}
-                onMouseOut={() => this.getPassive(arg)}
-                href={this.props.projs[parseInt(arg.substr(3, 1))-1][val]}
+                style={this.changeTextColot(arg)} 
+                onMouseOver={() => this.makeElementActive(arg)}
+                onMouseOut={() => this.makeElementPassive(arg)}
+                href={this.props.projects[parseInt(arg.substr(3, 1))-1][val]}
             >{'|  ' + val + '  |'}</a>
         )
     }
@@ -116,9 +116,9 @@ class Buttons extends React.Component {
     render() {
         return(
             <div class="bd">
-                {this.getBorder('B')}
-                {this.getBorder('V')}
-                {this.getBorder('B')}
+                {this.returnButtonLine('Border')}
+                {this.returnButtonLine('Value')}
+                {this.returnButtonLine('Border')}
             </div>
         )
     }
