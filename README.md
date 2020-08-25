@@ -33,6 +33,8 @@ skills: [
 
 Each object  in *skills* array is used to render: name is added to array as title of a skill, each item in *spec* array is added to the same array via parser script (it splits a line into strings of length *n*). After all items of array are mapped as paragraph HTML elements.
 
+So, the information is easy to change, add or edit changing only one file. All information will be rendered automaticaly.
+
 ### ToDo
 
 * Change browser icon
