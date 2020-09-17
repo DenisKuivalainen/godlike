@@ -32,11 +32,13 @@ app.get('/nspu/schedule', function (req, res) {
     });
 });
 
-// Calculatronz
-app.get('/calculatronz/btn', function(req, res) {
-    res.send(btn.btn(req));
+app.get('/nspu/download', function (req, res) {
+    let file = "Schedule.apk";
+    let fPath = path.join(__dirname, 'NSPU', file);
+    res.download(fPath);
 });
 
+// Calculatronz
 app.get('/calculatronz/summ', function(req, res) {
     res.send(summ.summ(req));
 });
