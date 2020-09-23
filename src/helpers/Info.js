@@ -90,22 +90,28 @@ export const info = {
             git: 'https://github.com/DenisKuivalainen/Calculator-react',
         },
         {
-            name: 'Maria Dikki',
-            desc: 'In progress: webpage for art disigner using React and VKontakte API.',
-            web: 'https://mariadikki.herokuapp.com/',
-            git: 'https://github.com/DenisKuivalai nen/mariadikki',
-        },
-        {
-            name: 'Beyend',
-            desc: 'In progress: 2d platformer game on Unity engine c#.',
-            web: 'https://beyend.herokuapp.com/',
-            git: 'https://github.com/DenisKuivalainen/beyend',
+            name: 'Schedule mobile',
+            desc: 'University schedule using DOM parser on Node and displaying with Vue native.',
+            web: 'http://kuivalainen.herokuapp.com/nspu/download',
+            git: 'https://github.com/DenisKuivalainen/mobile-schedule',
         },
         {
             name: 'X! O! Super',
             desc: 'TicTacToe 5x5 on Java using Swing as user interface.',
             web: 'https://drive.google.com/open?id=1EZ8Md8h1PbMlpLJE3GEkYdsUSRvgor7t',
             git: 'https://github.com/DenisKuivalainen/Tic-Tac-Toe/tree/5x5',
+        },
+        {
+            name: 'Beyend',
+            desc: 'In progress: 2d platformer game on Unity engine c#.',
+            web: '#',
+            git: 'https://github.com/DenisKuivalainen/beyend',
+        },
+        {
+            name: 'Maria Dikki',
+            desc: 'In progress: webpage for art disigner using React and VKontakte API.',
+            web: '#',
+            git: 'https://github.com/DenisKuivalai nen/mariadikki',
         },
     ],
     work: [
