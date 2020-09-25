@@ -39,6 +39,10 @@ app.get('/nspu/download', function (req, res) {
 });
 
 // Calculatronz
+app.get('/calculatronz/btn', function(req, res) {
+    res.send(btn.btn(req));
+});
+
 app.get('/calculatronz/summ', function(req, res) {
     res.send(summ.summ(req));
 });
@@ -79,11 +83,17 @@ app.get('/calculatronz/dis2', function(req, res) {
     res.send(mem.dis2(req));
 });
 
-app.get('/calculatronz/*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'CALCULATRONZ-build', 'build', 'index.html'));
+app.get('/calculatronz/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'CALCULATRONZ', 'build', 'index.html'));
+});
+
+// Beyend
+app.get('/beyend/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'BEYEND', 'build', 'index.html'));
 });
  
-app.get('/*', function (req, res) {
+// CV
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
