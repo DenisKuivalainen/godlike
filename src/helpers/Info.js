@@ -86,7 +86,7 @@ export const info = {
         {
             name: 'Calculatronz',
             desc: 'Web calculator, but all calculations are done on server side.',
-            web: 'http://calculatronz.herokuapp.com/',
+            web: 'http://kuivalainen.herokuapp.com/calculatronz',
             git: 'https://github.com/DenisKuivalainen/Calculator-react',
         },
         {
@@ -110,8 +110,8 @@ export const info = {
         {
             name: 'Maria Dikki',
             desc: 'In progress: webpage for art disigner using React and VKontakte API.',
-            web: '#',
-            git: 'https://github.com/DenisKuivalai nen/mariadikki',
+            web: 'http://kuivalainen.herokuapp.com/mariadikki',
+            git: 'https://github.com/DenisKuivalainen/mariadikki',
         },
     ],
     work: [
