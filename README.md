@@ -6,7 +6,7 @@ This page was created to achieve 2 goals: to be able to provide information abou
 
 * [Webpage](https://kuivalainen.herokuapp.com/) hosted on Heroku.
 * [Calculatronz](https://kuivalainen.herokuapp.com/calculatronz) page hosted on the server.
-* [Schedule](https://kuivalainen.herokuapp.com/nspu/download?id=1139) api hosted on the server.
+* [Schedule](https://kuivalainen.herokuapp.com/nspu/schedule?id=1139) api hosted on the server.
 
 ### Technologies
 
