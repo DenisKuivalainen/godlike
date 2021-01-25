@@ -11,7 +11,7 @@ export const info = {
         'Finnish (B1)',
         'Russian (native)'
     ],
-    git: 'github.com/DenisKuivalainen',
+    git: 'https://github.com/DenisKuivalainen',
     lki: 'https://www.linkedin.com/in/denis-kuivalainen-36119a1a3/',
     edu: [
         {
